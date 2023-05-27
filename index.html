@@ -30,46 +30,70 @@
           type="text"
           class="form-control mb-2 w-25"
           aria-describedby="emailHelpId"
-          id="themSo"
-          placeholder="Thêm số"
+          id="nhapSo"
+          placeholder="Nhập số"
         />
       </div>
-      <button type="button" class="btn btn-warning">Kết quả</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="ketQua()">
+        Kết quả
+      </button>
+      <div class="alert alert-dark mb-2 w-25" id="baiTap"></div>
       <br />
       <h3>1.Tổng các số dương trong mảng.</h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 1</button>
+      <button type="button" class="btn btn-warning" onclick="tongSoDuong()">
+        Kết quả Bài 1
+      </button>
       <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
       <br />
       <h3>2. Đếm có bao nhiêu số dương trong mảng</h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 2</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="demSoDuong()">Kết quả Bài 2</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai2"></div>
       <br />
       <h3>3. Tìm số nhỏ nhất trong mảng.</h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 3</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="timSoNhoNhat()">Kết quả Bài 3</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai3"></div>
       <br />
       <h3>4. Tìm số dương nhỏ nhất trong mảng.</h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 4</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="timSoDuongNhoNhat()">Kết quả Bài 4</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai4"></div>
       <br />
       <h3>
         5. Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì
         trả về -1.
       </h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 5</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="timSoChanCuoiCung()">Kết quả Bài 5</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai5"></div>
       <br />
       <h3>
         6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn
         đổi chỗ giá trị).
       </h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 6</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <div class="mb-2">
+        <label for="" class="form-label"></label>
+        <input
+          type="text"
+          class="form-control mb-2 w-25"
+          aria-describedby="emailHelpId"
+          id="so1"
+          placeholder="Vị trí thứ 1"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="" class="form-label"></label>
+        <input
+          type="text"
+          class="form-control mb-2 w-25"
+          aria-describedby="emailHelpId"
+          id="so2"
+          placeholder="Vị trí thứ 2"
+        />
+      </div>
+      <button type="button" class="btn btn-warning" onclick="doiViTri()">Kết quả Bài 6</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai6"></div>
       <br />
       <h3>7. Sắp xếp mảng theo thứ tự tăng dần.</h3>
-      <button type="button" class="btn btn-warning">Kết quả Bài 7</button>
-      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+      <button type="button" class="btn btn-warning" onclick="mangTangDan()">Kết quả Bài 7</button>
+      <div class="alert alert-dark mb-2 w-25" id="ketQuaBai7"></div>
       <br />
       <h3>
         8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố
@@ -103,5 +127,6 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
