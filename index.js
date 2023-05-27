@@ -1,4 +1,5 @@
 var arr1 = [];
+var mangSoThuc = [];
 
 
 // arr1
@@ -7,7 +8,9 @@ function ketQua() {
   arr1.push(nhapSo);
   document.getElementById("baiTap").innerHTML = arr1;
   console.log(arr1);
+  document.querySelector("#hienThiMang").innerHTML = arr1;
 
+  
 }
 
 // 1.Tổng các số dương trong mảng.
@@ -94,4 +97,83 @@ function mangTangDan() {
       return a - b;
     });
     document.getElementById("ketQuaBai7").innerHTML = arr1
+  }
+
+
+//   8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1 
+function timSoNguyen() {
+    for (var i = 0; i < arr1.length; i++) {
+      var soNguyen = arr1[i];
+      var mangSoNguyen = true;
+  
+      if (soNguyen <= 1) {
+        continue; 
+      }
+  
+      for (var j = 2; j <= Math.sqrt(soNguyen); j++) {
+        if (soNguyen % j === 0) {
+          mangSoNguyen = false;
+          break;
+        }
+      }
+  
+      if (mangSoNguyen) {
+        return soNguyen; 
+      }
+    }
+
+    return -1; 
+}
+  document.getElementById("ketQuaBai8").innerHTML = -1;
+
+//   9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?
+
+function themMang() {
+    var themMangMoi = document.getElementById("themMangMoi").value * 1;
+    mangSoThuc.push(themMangMoi);
+    document.querySelector("#hienThiMangVuaTHem").innerHTML = mangSoThuc;
+  }
+  function demSoNguyen() {
+    var demSoNguyenTrongMang = 0;
+    for (var i = 0; i <= mangSoThuc.length; i++) {
+      if (typeof mangSoThuc[i] == "number") {
+        demSoNguyenTrongMang++;
+      }
+    }
+    document.querySelector("#hienThiSoNguyen").innerHTML = demSoNguyenTrongMang;
+  }
+
+
+//   10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn. 
+function soSanh() {
+    var soDuong = 0; // Đếm số lượng số dương
+    var soAm = 0; // Đếm số lượng số âm
+  
+    for (var i = 0; i < arr1.length; i++) {
+      if (arr1[i] > 0) {
+        s++; // Tăng đếm số dương nếu phần tử lớn hơn 0
+      } else if (arr1[i] < 0) {
+        soAm++; // Tăng đếm số âm nếu phần tử nhỏ hơn 0
+      }
+    }
+  
+    if (soDuong > soAm) {
+      document.getElementById("ketQuaBai0").innerHTML = "số dương > số âm";
+    } else if (countPositive < countNegative) {
+        document.getElementById("ketQuaBai0").innerHTML = "số dương < số âm";
+    } else {
+        document.getElementById("ketQuaBai0").innerHTML = "số dương = số âm";
+    }
+  }
+  function isPrime(num) {
+    var sqrtnum = Math.floor(Math.sqrt(num));
+    var prime = num != 1;
+    for (var i = 2; i < sqrtnum + 1; i++) {
+      // sqrtnum+1
+      if (num % i == 0) {
+        prime = false;
+        break;
+      }
+    }
+    return prime;
   }
